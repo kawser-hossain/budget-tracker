@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Budget</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  
+
+
+
+  <div class="container">
+    <div class="budget-analysis">
+      <h2>Budget analysis</h2>
+   
+      <div class="month-income">
+        
+        <div class="select-mont-area">
+  
+          <label for="monts">Select month:</label>
+          <select id="monts" name="monts">
+            <option value="" disabled selected>Select</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+
+        <div class="input-area">
+          <p>This month total income</p>
+          <input type="number" class="input" id="month-total-income" placeholder="Enter amount">
+        </div>
+        
+
+      </div>
+
+      <div class="spend-list">
+
+        <div class="add-list">
+          <p>Add spend list</p>
+          <button class="button" id="add-list"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <div class="list-inputs">
+
+          <!-- <input type="text" placeholder="Rend, Maintenance, groceries etc" id="spend-title">
+          <input type="number" placeholder="amount" id="spend-amount">
+          <button onclick="tackData()" >save</button> -->
+
+        </div>
+        
+        <div class="list-details">
+
+          <!-- <div class="list-detail"> 
+            <div class="spend-title">
+              <h3>car wash</h3>
+            </div>
+            <div class="spend-amount">
+              <h3>300</h3>
+              <button id="delete-list" onclick="deleteList(event)"><i class="fa-solid fa-x"></i></button>
+              <button id="edit-list" onclick="editList(event)"><i class="fa-solid fa-pen"></i></button>
+            </div> 
+          </div> -->
+
+
+        </div>
+      </div>
+
+      <div class="query-area">
+        <div class="query">
+          <button id="query-button" onclick="sumAmount()">Query</button>
+        </div>
+      </div>
+
+
+
+      <div class="query-result-wrap">
+
+        <div class="query-result">
+
+          <div class="chart-area">
+            <canvas id="spendingChart" width="240" height="240"></canvas>
+            
+          </div>
+          <div class="money-canculate-area">
+            
+            <div class="sum-area">
+              <div class="sum-result result">
+                <h3>Total spend</h3>
+                <p id="sum"></p>
+              </div>
+            </div>
+            <div class="money-left result">
+              <h3>Money left</h3>
+              <p id="left-money"></p>
+            </div>
+
+          </div>
+            
+        </div>
+          
+      </div>
+
+      <div class="query-conform-area">
+        
+        <!-- <button class="conform-btn" onclick="saveData()">Save query</button>
+        <button class="conform-btn" onclick="clearData()">Clear query</button> -->
+     
+      </div>
+
+
+
+    </div>
+
+    <div class="show-data">
+
+      <div class="query-boxes">
+
+        <!-- <div class="query-box">
+          <h3>February</h3>
+        </div>
+         -->
+        
+      </div>
+
+
+    </div>
+  </div>
+
+<div class="display-query">
+  <div class="querys">
+    <div class="query-data">
+      <h3> <span></span></h3>
+      <h2> <span></span></h2>
+
+      <div class="spends-area">
+        <h3>spends</h3>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <script src="code.js" ></script>
+</body>
+</html>

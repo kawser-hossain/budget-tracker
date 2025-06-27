@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+*{
+  box-sizing: border-box;
+}
+
+
+:root{
+  --title-font: "Roboto", sans-serif;
+  --text-font: "Montserrat", sans-serif;
+}
+h1,h2,h3,h4,h5,h6,label{
+  font-family: var(--title-font);
+}
+a,span,p,button{
+  font-family: var(--text-font);
+}
+
+
+body{
+  margin: 0;
+  background-color: pink;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.budget-analysis h2{
+  text-align: center;
+}
+
+
+
+.input-area{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.input-area p {
+    font-weight: 600;
+}
+
+.input{
+    height: 30px;
+    border: none;
+    padding-left: 12px;
+    font-family: var(--title-font);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+input#spend-title {
+    width: 360px;
+}
+
+.add-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    height: 33px;
+    width: 56px;
+    cursor: pointer;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.list-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.list-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.list-detail {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    margin: 15px 0;
+    width: 520px;
+    justify-content: space-between;
+}
+
+button#delete-list {
+    width: 35px;
+    height: 24px;
+    border: none;
+    background-color: lightcoral;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.query-area{
+  display: none;
+
+}
+.query {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 0;
+}
+
+.query-result-wrap{
+  display: none;
+}
+
+.sum-result, .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+
+
+.budget-analysis {
+    width: 840px;
+    background-color: palegoldenrod;
+    border-radius: 10px;
+    margin: 50px 20px;
+    padding: 15px 0 35px 0;
+}
+
+.spend-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+button#query-button {
+    width: 550px;
+    background-color: cornsilk;
+    border: none;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--title-font);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+#monts {
+    border: none;
+    padding: 5px 5px;
+    width: 188px;
+    font-weight: 700;
+    color: #676767;
+    font-family: var(--title-font);
+}
+
+
+
+
+.month-income {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.select-mont-area label{
+  font-weight: 600;
+}
+
+.select-mont-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 135px;
+}
+
+#edit-list{
+    width: 35px;
+    height: 24px;
+    border: none;
+    background-color: yellow;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.query-conform-area{
+  margin-top: 50px;
+  display: flex;
+  /* align-items: center; */
+  gap: 50px;
+  justify-content: center;
+}
+.conform-btn{
+  /* display: none; */
+}
+
+
+.show-data{
+    height: 360px;
+    width: 500px;
+    background-color: azure;
+    margin: 50px 20px;
+    padding: 20px 20px 35px 20px;
+    border-radius: 10px;
+}
+
+.query-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.query-box {
+    background-color: lightblue;
+    width: 104px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.query-box h3 {
+  margin: 0;
+}
+
+.querys{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.display-query {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+
+.query-data {
+    background-color: lightcyan;
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 22px;
+    position: relative;
+}
+
+.spend {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+canvas#spendingChart {
+    width: 240px !important;
+    height: 240px !important;
+}
+
+.query-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.chart-area {
+    margin-left: -40px;
+}
